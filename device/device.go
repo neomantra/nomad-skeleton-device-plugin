@@ -183,7 +183,7 @@ func (e *reservationError) Error() string {
 	return fmt.Sprintf("unknown device IDs: %s", strings.Join(e.notExistingIDs, ","))
 }
 
-// Reserve returns information to the task driver on on how to mount the given devices.
+// Reserve returns information to the task driver on how to mount the given devices.
 // It may also perform any device-specific orchestration necessary to prepare the device
 // for use. This is called in a pre-start hook on the client, before starting the workload.
 func (d *SkeletonDevicePlugin) Reserve(deviceIDs []string) (*device.ContainerReservation, error) {
